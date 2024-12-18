@@ -7,18 +7,10 @@ body {
     padding: 100px 0 0;
 }
 
-.container {
-    width: 80%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-header {
+.header {
     background-color: #3a6ea5;
     color: white;
     padding: 10px 0;
-    text-align: center;
     position: fixed;
     top: 0;
     width: 100%;
@@ -26,11 +18,12 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-header h1 {
+.header__title {
     margin: 0;
+    text-align: center;
 }
 
-nav ul {
+.menu__list {
     list-style: none;
     padding: 0;
     display: flex;
@@ -39,7 +32,7 @@ nav ul {
     margin: 10px 0 0;
 }
 
-nav a {
+.menu__link {
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -49,11 +42,11 @@ nav a {
     transition: background-color 0.3s;
 }
 
-nav a:hover {
+.menu__link:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-section {
+.section {
     margin: 20px 0;
     padding: 20px 0;
     background-color: white;
@@ -61,19 +54,27 @@ section {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-section h2 {
-    text-align: center;
-    color: #3a6ea5;
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-.game-list {
+.container__title {
+    text-align: center;
+    color: #3a6ea5;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.gamelist {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.game {
+.gamecard {
     background-color: #e3f2fd;
     padding: 15px;
     border-radius: 8px;
@@ -82,46 +83,41 @@ section h2 {
     text-align: center;
 }
 
-.game img {
+.gamecard__img {
     width: 100%;
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 10px;
 }
 
-.game h3 {
+.gamecard__name {
     margin-bottom: 10px;
     font-size: 1.2rem;
     color: #333;
 }
 
-.game p {
+.gamecard__text {
     font-size: 0.9rem;
     color: #555;
 }
 
-footer {
+.footer {
     text-align: center;
     padding: 20px 0;
     background-color: #333;
     color: white;
 }
 
-footer p {
+.footer p {
     margin: 5px 0;
 }
 
-footer a {
-    color: #3a6ea5;
-    text-decoration: none;
-}
-
 @media (max-width: 955px) {
-    header {
+    .header {
         height: 80px;
     }
 
-    header h1 {
+    .header__title {
         display: none;
     }
 
@@ -131,19 +127,17 @@ footer a {
 }
 
 @media (max-width: 1024px) {
-    .game {
-        width: calc(33.33% - 15px);
+    .gamecard {
+        width: calc(40% - 15px);
     }
 }
 
-@media (max-width: 768px) {
-    .game {
-        width: calc(50% - 15px);
-    }
-}
-
-@media (max-width: 480px) {
-    .game {
+@media (max-width: 600px) {
+    .gamecard {
         width: 100%;
+    }
+
+    .gamelist {
+        justify-content: center;
     }
 }
