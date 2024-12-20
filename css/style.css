@@ -176,18 +176,6 @@ body {
     background-color: #005bb5;
 }
 
-/*.schedule-table {*/
-/*    width: 100%;*/
-/*    border-collapse: collapse;*/
-/*    margin-top: 20px;*/
-/*}*/
-
-/*.schedule-table td {*/
-/*    border: 1px solid #ddd;*/
-/*    padding: 10px;*/
-/*    text-align: center;*/
-/*}*/
-
 @media (max-width: 955px) {
     .header {
         display: none;
@@ -234,4 +222,57 @@ body {
     .game-list {
         justify-content: center;
     }
+}
+
+.comments__container {
+    margin: 10px auto;
+    padding: 20px 50px;
+    background-color: white;
+    border-radius: 20px;
+    width: 60%;
+}
+
+.comment {
+    padding: 10px 0;
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1;
+}
+
+.comment__author {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.comment__text {
+    font-weight: lighter;
+}
+
+.comments__title {
+    text-align: center;
+    color: black;
+    margin: 0;
+}
+
+#preloader {
+    display: none;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #4caf50;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
 }
