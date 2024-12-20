@@ -1,9 +1,11 @@
+import scrollMonitor from 'scrollmonitor';
+
 document.addEventListener('DOMContentLoaded', () => {
     const commentsContainer = document.getElementById('comments__list');
     const preloader = document.getElementById('preloader');
     const apiUrl = 'https://jsonplaceholder.typicode.com/comments';
     let isEvenRequest = true;
-    const scrollMonitor = require("scrollmonitor");
+    // const scrollMonitor = require("scrollmonitor");
     const commentsWatcher = scrollMonitor.create(commentsContainer);
 
     function loadComments() {
