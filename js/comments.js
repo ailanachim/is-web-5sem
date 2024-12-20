@@ -4,10 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const apiUrl = 'https://jsonplaceholder.typicode.com/comments';
     let isEvenRequest = true;
 
+    // library used for pretty scrolling of comments
     AOS.init({
-        duration: 200,
-        easing: 'ease-in-out',
-        once: true,
+        duration: 200, // duration of animation in milliseconds
+        easing: 'ease-in-out', // type of animation
+        once: true, // the animation will be executed once
     });
 
     function loadComments() {
@@ -42,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <p class="comment__author">${comment.name} (${comment.email}):</p>
                             <p class="comment__text">${comment.body}</p>
                         </div>
-                    `;
+                    `;  // fade-up is animation type for this object
                     commentsContainer.appendChild(commentElement);
                 });
             })
