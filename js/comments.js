@@ -4,6 +4,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const apiUrl = 'https://jsonplaceholder.typicode.com/comments';
     let isEvenRequest = true;
 
+    AOS.init({
+        duration: 200,
+        easing: 'ease-in-out',
+        once: true,
+    });
+
     function loadComments() {
         preloader.style.display = 'block';
         commentsContainer.innerHTML = '';
@@ -32,8 +38,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     const commentElement = document.createElement('div');
                     commentElement.className = 'comment';
                     commentElement.innerHTML = `
-                        <p class="comment__author">${comment.name} (${comment.email}):</p>
-                        <p class="comment__text">${comment.body}</p>
+                        <div data-aos="fade-up">
+                            <p class="comment__author">${comment.name} (${comment.email}):</p>
+                            <p class="comment__text">${comment.body}</p>
+                        </div>
                     `;
                     commentsContainer.appendChild(commentElement);
                 });
