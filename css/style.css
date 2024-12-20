@@ -4,7 +4,7 @@ body {
     margin: 0;
     color: #333;
     background-color: #f9f9f9;
-    padding: 100px 0 0;
+    padding: 140px 0 0;
 }
 
 .header {
@@ -60,7 +60,7 @@ body {
 }
 
 .menu__link__active {
-    border-top: 3px solid #99ccee;
+    color: #99ccee;
 }
 
 .menu__link:hover {
@@ -99,14 +99,14 @@ body {
     height: 60%;
 }
 
-.gamelist {
+.game-list {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.gamecard {
+.game-card {
     background-color: #e3f2fd;
     padding: 15px;
     border-radius: 8px;
@@ -115,20 +115,20 @@ body {
     text-align: center;
 }
 
-.gamecard__img {
+.game-card__img {
     width: 100%;
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 10px;
 }
 
-.gamecard__name {
+.game-card__name {
     margin-bottom: 10px;
     font-size: 1.2rem;
     color: #333;
 }
 
-.gamecard__text {
+.game-card__text {
     font-size: 0.9rem;
     color: #555;
 }
@@ -145,11 +145,48 @@ body {
     margin: 5px 0;
 }
 
-#loadstats {
+#load-stats {
     margin-top: 30px;
     font-style: italic;
     font-size: 0.8rem;
 }
+
+.form {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form label {
+    font-weight: bold;
+}
+
+.form button {
+    background-color: #0074d9;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.form button:hover {
+    background-color: #005bb5;
+}
+
+/*.schedule-table {*/
+/*    width: 100%;*/
+/*    border-collapse: collapse;*/
+/*    margin-top: 20px;*/
+/*}*/
+
+/*.schedule-table td {*/
+/*    border: 1px solid #ddd;*/
+/*    padding: 10px;*/
+/*    text-align: center;*/
+/*}*/
 
 @media (max-width: 955px) {
     .header {
@@ -167,7 +204,7 @@ body {
 }
 
 @media (max-width: 1024px) {
-    .gamecard {
+    .game-card {
         width: calc(40% - 15px);
     }
 }
@@ -190,11 +227,11 @@ body {
     }
 
 
-    .gamecard {
+    .game-card {
         width: 100%;
     }
 
-    .gamelist {
+    .game-list {
         justify-content: center;
     }
 }

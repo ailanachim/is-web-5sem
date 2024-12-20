@@ -1,7 +1,7 @@
 (function () {
     window.addEventListener('load', function () {
         const loadTime = performance.now();
-        const statsContainer = document.getElementById('loadstats');
+        const statsContainer = document.getElementById('load-stats');
         if (statsContainer) {
             statsContainer.textContent = `Page loaded for ${loadTime.toFixed(2)} ms.`;
         }
