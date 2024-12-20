@@ -1,11 +1,8 @@
-import scrollMonitor from 'scrollmonitor';
-
 document.addEventListener('DOMContentLoaded', () => {
     const commentsContainer = document.getElementById('comments__list');
     const preloader = document.getElementById('preloader');
     const apiUrl = 'https://jsonplaceholder.typicode.com/comments';
     let isEvenRequest = true;
-    const commentsWatcher = scrollMonitor.create(commentsContainer);
 
     function loadComments() {
         preloader.style.display = 'block';
@@ -49,8 +46,5 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     }
 
-    commentsWatcher.enterViewport(() => {
-        loadComments();
-        commentsWatcher.destroy();
-    }, true);
+    loadComments();
 });
