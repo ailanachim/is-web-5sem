@@ -8,11 +8,12 @@ window.addEventListener('load', function () {
 
 document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.getElementsByClassName("menu__link");
-    const currentPage = document.location.pathname.split('/').pop();
+    let currentPage = document.location.pathname.split('/').pop();
+    if (currentPage === '') {
+        currentPage = 'index.html';
+    }
 
     for (let i = 0; i < navLinks.length; i++) {
-        console.log(currentPage);
-        console.log(navLinks[i].getAttribute('href'));
         if (navLinks[i].getAttribute('href') === currentPage) {
             navLinks[i].classList.add('menu__link__active');
             break;
