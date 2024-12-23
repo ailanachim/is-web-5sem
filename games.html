@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Коллекция игр</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/stats.js" defer></script>
+    <script src="js/filter.js" defer></script>
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <h1 class="header__title">Клуб настольных социальных игр MindPlay 🎲</h1>
+    </div>
+</header>
+<nav>
+    <ul class="menu__list">
+        <li><a href="index.html" class="menu__link">Описание</a></li>
+        <li><a href="games.html" class="menu__link">Игры</a></li>
+        <li><a href="events.html" class="menu__link">Мероприятия</a></li>
+        <li><a href="contacts.html" class="menu__link">Контакты</a></li>
+    </ul>
+</nav>
+<button id="menu__toggle">☰</button>
+
+<main>
+    <section class="section">
+        <div class="container">
+            <h2 class="container__title">Наши игры</h2>
+
+            <form id="games-filter" class="form">
+                <label for="age-filter">Возраст:</label>
+                <select id="age-filter" name="age">
+                    <option value="Все">Все</option>
+                    <option value="6">6+</option>
+                    <option value="12">12+</option>
+                    <option value="16">16+</option>
+                    <option value="18">18+</option>
+                </select>
+
+                <label for="players-filter">Количество игроков:</label>
+                <select id="players-filter" name="players">
+                    <option value="Все">Все</option>
+                    <option value="4">От 4 игроков</option>
+                    <option value="5">От 5 игроков</option>
+                    <option value="7">От 7 игроков</option>
+                </select>
+
+                <label for="time-filter">Время игры:</label>
+                <select id="time-filter" name="players">
+                    <option value="Все">Все</option>
+                    <option value="20">20 мин</option>
+                    <option value="30">30 мин</option>
+                    <option value="45">45 мин</option>
+                    <option value="60">Более 60 мин</option>
+                </select>
+            </form>
+
+            <div class="game-list">
+                <div class="game-card" data-age="12" data-players="4-12" data-time="15-60">
+                    <img class="game-card__img" src="images/nechto.jpg" alt="Нечто из глубокой бездны">
+                    <h3 class="game-card__name">Нечто из глубокой бездны</h3>
+                    <p class="game-card__text">Атмосферная игра на доверие и предательство. Сможете ли вы спастись?</p>
+                </div>
+                <div class="game-card" data-age="13" data-players="5-10" data-time="30+">
+                    <img class="game-card__img" src="images/soprotivlenie.jpg" alt="Сопротивление">
+                    <h3 class="game-card__name">Сопротивление</h3>
+                    <p class="game-card__text">Игра о шпионах и борьбе за правду. Кто друг, а кто враг?</p>
+                </div>
+                <div class="game-card" data-age="16" data-players="4-16" data-time="15-90">
+                    <img class="game-card__img" src="images/sudniy-den.jpg" alt="Судный день">
+                    <h3 class="game-card__name">Судный день</h3>
+                    <p class="game-card__text">Стратегическая настолка про выживание в условиях апокалипсиса.</p>
+                </div>
+                <div class="game-card" data-age="14" data-players="7-17" data-time="20+">
+                    <img class="game-card__img" src="images/mafia.jpg" alt="Мафия">
+                    <h3 class="game-card__name">Мафия</h3>
+                    <p class="game-card__text">Классика жанра — логика, психология и командная работа.</p>
+                </div>
+                <div class="game-card" data-age="13" data-players="5-10" data-time="45">
+                    <img class="game-card__img" src="images/secretniy-hitler.jpg" alt="Тайный канцлер">
+                    <h3 class="game-card__name">Тайный канцлер</h3>
+                    <p class="game-card__text">Стратегия и политика. Найдите секретного фашиста до того, как станет
+                        поздно!</p>
+                </div>
+                <div class="game-card" data-age="18" data-players="4-16" data-time="30-60">
+                    <img class="game-card__img" src="images/bunker.jpg" alt="Бункер">
+                    <h3 class="game-card__name">Бункер</h3>
+                    <p class="game-card__text">Выживите в закрытом пространстве, убеждая других в своей важности.</p>
+                </div>
+                <div class="game-card" data-age="16" data-players="4-6" data-time="40+">
+                    <img class="game-card__img" src="images/za-bortom.jpg" alt="За бортом">
+                    <h3 class="game-card__name">За бортом</h3>
+                    <p class="game-card__text">Кто сможет выжить, а кто будет брошен за борт? Выбор за вами.</p>
+                </div>
+                <div class="game-card" data-age="12" data-players="4-11" data-time="15-30">
+                    <img class="game-card__img" src="images/noch-nindzya.jpg" alt="Ночь ниндзя">
+                    <h3 class="game-card__name">Ночь ниндзя</h3>
+                    <p class="game-card__text">Тайная миссия и скрытые роли. Кто станет настоящим мастером ниндзя?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <div class="container">
+        <p id="load-stats"></p>
+    </div>
+</footer>
+</body>
+</html>
