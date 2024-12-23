@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const currentPage = document.location.pathname.split('/').pop();
 
     for (let i = 0; i < navLinks.length; i++) {
+        console.log(currentPage);
+        console.log(navLinks[i].getAttribute('href'));
         if (navLinks[i].getAttribute('href') === currentPage) {
             navLinks[i].classList.add('menu__link__active');
             break;
@@ -27,4 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
             menu.style.display = "none";
         }
     });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 600) {
+            menu.style.display = "flex";
+        } else {
+            menu.style.display = "none";
+        }
+    })
 });
